@@ -59,14 +59,11 @@ const client = new Client({
 client.on('message', msg => {
   if (msg.body == '!ping') {
     msg.reply('pong');
-  }msg.reply('selamat pagi');
-}else if (msg.body == 'السلام عليكم') {
-msg.reply('وعليكم السلام');
-}
-  
-  else if (msg.body == 'good morning') {
+  } else if (msg.body == 'good morning') {
     msg.reply('selamat pagi');
-  } else if (msg.body == '!groups') {
+  }else if (msg.body == 'السلام عليكم') {
+    msg.reply('وعليكم السلام');
+  }else if (msg.body == '!groups') {
     client.getChats().then(chats => {
       const groups = chats.filter(chat => chat.isGroup);
 
